@@ -5,171 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos | João Miguel</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#0a0a0a] text-white font-sans">
-
-    <!-- NAVBAR -->
-    <nav class="nav-glass fixed top-0 left-0 right-0 z-50 border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-x-2">
-                <div class="w-8 h-8 bg-white rounded-2xl flex items-center justify-center text-[#0a0a0a] font-bold text-xl">JM</div>
+<body>
+    <nav class="nav-glass fixed top-0 left-0 right-0">
+        <div class="container flex-between nav-padding">
+            <div class="flex gap-2">
+                <div class="w-8 h-8 bg-white rounded-2xl flex-center text-dark font-bold text-xl">JM</div>
                 <h1 class="text-2xl font-semibold tracking-tight">João Miguel</h1>
             </div>
             
-            <ul class="flex items-center gap-x-8 text-sm font-medium">
-                <li><a href="index.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">Início</a></li>
-                <li><a href="1ano.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">1º Ano</a></li>
-                <li><a href="2ano.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">2º Ano</a></li>
-                <li><a href="3ano.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">3º Ano</a></li>
-                <li><a href="projetos.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">Projetos</a></li>
+            <ul class="flex gap-6 text-sm font-medium">
+                <li><a href="index.html" class="link">Início</a></li>
+                <li><a href="1ano.html" class="link">1º Ano</a></li>
+                <li><a href="2ano.html" class="link">2º Ano</a></li>
+                <li><a href="3ano.html" class="link">3º Ano</a></li>
+                <li><a href="projetos.html" class="link">Projetos</a></li>
             </ul>
             
-            <div class="flex items-center gap-x-2 text-xs uppercase tracking-widest font-medium px-4 py-2 bg-white/10 rounded-3xl">
-                <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+            <div class="flex gap-2 text-xs uppercase tracking-widest font-medium px-4 py-2 badge">
+                <div class="badge-pulse"></div>
                 Estudante de DS • 3º EM
             </div>
         </div>
     </nav>
 
-    <!-- HEADER -->
-    <header class="hero-bg min-h-[50vh] flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 py-24">
-            <div class="inline-flex items-center gap-2 bg-white/10 text-white text-sm font-medium px-6 py-3 rounded-3xl backdrop-blur-xl mb-6">
-                <span class="text-emerald-400">●</span>
+    <header class="hero-bg min-h-[50vh] flex-center hero-padding">
+        <div class="container">
+            <div class="inline-flex gap-2 bg-white/10 text-white text-sm font-medium px-6 py-3 rounded-3xl backdrop">
+                <span class="text-green">●</span>
                 Portfólio de Projetos
             </div>
             
-            <h1 class="hero-text text-6xl md:text-7xl font-semibold tracking-tighter mb-6">
+            <h1 class="text-6xl md:text-7xl font-semibold tracking-tight mb-6">
                 Meus <span class="text-white">Projetos</span>
             </h1>
             
-            <p class="text-xl text-zinc-400 max-w-2xl">
+            <p class="text-xl text-muted max-w-2xl">
                 Uma coleção dos projetos que desenvolvi ao longo da minha jornada no curso de Análise e Desenvolvimento de Sistemas.
             </p>
         </div>
     </header>
 
-    <!-- PROJETOS -->
-    <section class="max-w-7xl mx-auto px-6 py-12">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <!-- Projeto 1 -->
-            <div class="glass-card group rounded-3xl overflow-hidden hover:scale-[1.02]">
-                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 aspect-video flex items-center justify-center text-8xl">
-                    💻
+    <section class="container section-sm">
+        <div class="grid-3 gap-6">
+            <div class="glass-card group">
+                <div class="card-img">
+                    <img src="Captura de tela de 2026-03-24 23-34-27.png" alt="Trivio">
                 </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-x-3 mb-4">
-                        <span class="text-xs uppercase tracking-widest text-emerald-400">2026 • 3º Ano</span>
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">Web</span>
+                <div class="card-p">
+                    <div class="flex gap-3 mb-4">
+                        <span class="text-xs uppercase tracking-widest text-green">2026 • 3º Ano</span>
+                        <span class="badge">Web</span>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Trivio</h3>
-                    <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
+                    <h3 class="text-2xl font-semibold mb-3 link-green">Trivio</h3>
+                    <p class="text-muted mb-6 line-clamp-3">
                         Projeto principal, tema de Startup.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">HTML</span>
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">CSS</span>
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">JS</span>
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">MongoDB</span>
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">Node.js</span>
+                    <div class="flex-wrap gap-2">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Node.js</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Projeto 2 -->
-            <div class="glass-card group rounded-3xl overflow-hidden hover:scale-[1.02]">
-                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 aspect-video flex items-center justify-center text-8xl">
-                    🛒
+            <div class="glass-card group">
+                <div class="card-img">
+                    <img src="landing1.png" alt="Landing page Trivio">
                 </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-x-3 mb-4">
-                        <span class="text-xs uppercase tracking-widest text-emerald-400">2025 • 2º Ano</span>
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">Web</span>
+                <div class="card-p">
+                    <div class="flex gap-3 mb-4">
+                        <span class="text-xs uppercase tracking-widest text-green">2025 • 2º Ano</span>
+                        <span class="badge">Web</span>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Landing page Trivio</h3>
-                    <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
+                    <h3 class="text-2xl font-semibold mb-3 link-green">Landing page Trivio</h3>
+                    <p class="text-muted mb-6 line-clamp-3">
                         Página de vendas Trivio.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">HTML</span>
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">CSS</span>
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">JS</span>
+                    <div class="flex-wrap gap-2">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Projeto 3 -->
-            <div class="glass-card group rounded-3xl overflow-hidden hover:scale-[1.02]">
-                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 aspect-video flex items-center justify-center text-8xl">
-                    🎮
+            <div class="glass-card group">
+                <div class="card-img">
+                    <img src="hxh1.png" alt="HxH">
                 </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-x-3 mb-4">
-                        <span class="text-xs uppercase tracking-widest text-emerald-400">2026 • 3º Ano</span>
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">Web</span>
+                <div class="card-p">
+                    <div class="flex gap-3 mb-4">
+                        <span class="text-xs uppercase tracking-widest text-green">2026 • 3º Ano</span>
+                        <span class="badge">Web</span>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-3 group-hover:text-emerald-400 transition-colors">Página informativa HxH</h3>
-                    <p class="text-zinc-400 text-sm mb-6 line-clamp-3">
+                    <h3 class="text-2xl font-semibold mb-3 link-green">Página informativa HxH</h3>
+                    <p class="text-muted mb-6 line-clamp-3">
                         Página informativa sobre Hunter x Hunter com auxílio de IA.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">React</span>
-                        <span class="text-xs px-3 py-1 bg-white/10 rounded-2xl">Node</span>
+                    <div class="flex-wrap gap-2">
+                        <span class="tag">React</span>
+                        <span class="tag">Node</span>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- ESTATÍSTICAS -->
     <section class="bg-white/5 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="glass-card rounded-3xl p-8 text-center">
-                    <div class="text-5xl font-semibold text-emerald-400 mb-2">3</div>
-                    <div class="text-zinc-400 text-sm">Projetos</div>
+        <div class="container">
+            <div class="grid-4 gap-6">
+                <div class="glass-card card-p text-center">
+                    <div class="text-5xl font-semibold text-green mb-2">3</div>
+                    <div class="text-muted text-sm">Projetos</div>
                 </div>
-                <div class="glass-card rounded-3xl p-8 text-center">
-                    <div class="text-5xl font-semibold text-emerald-400 mb-2">3</div>
-                    <div class="text-zinc-400 text-sm">Anos de Curso</div>
+                <div class="glass-card card-p text-center">
+                    <div class="text-5xl font-semibold text-green mb-2">3</div>
+                    <div class="text-muted text-sm">Anos de Curso</div>
                 </div>
-                <div class="glass-card rounded-3xl p-8 text-center">
-                    <div class="text-5xl font-semibold text-emerald-400 mb-2">5+</div>
-                    <div class="text-zinc-400 text-sm">Tecnologias</div>
+                <div class="glass-card card-p text-center">
+                    <div class="text-5xl font-semibold text-green mb-2">5+</div>
+                    <div class="text-muted text-sm">Tecnologias</div>
                 </div>
-                <div class="glass-card rounded-3xl p-8 text-center">
-                    <div class="text-5xl font-semibold text-emerald-400 mb-2">2+</div>
-                    <div class="text-zinc-400 text-sm">Anos de Experiência</div>
+                <div class="glass-card card-p text-center">
+                    <div class="text-5xl font-semibold text-green mb-2">2+</div>
+                    <div class="text-muted text-sm">Anos de Experiência</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="max-w-7xl mx-auto px-6 py-24">
-        <div class="glass-card rounded-3xl p-12 text-center">
-            <h2 class="section-title text-4xl font-semibold mb-6">Gostou do meu trabalho?</h2>
-            <p class="text-zinc-400 text-lg mb-8 max-w-xl mx-auto">
+    <section class="container section">
+        <div class="glass-card card-lg text-center">
+            <h2 class="text-4xl font-semibold mb-6">Gostou do meu trabalho?</h2>
+            <p class="text-muted text-lg mb-8 max-w-xl mx-auto">
                 Estou sempre aberto a novas oportunidades e colaborações.
             </p>
-            <a href="mailto:Pradojoaomiguel061@gmail.com" class="inline-flex items-center gap-x-3 bg-white text-[#0a0a0a] hover:bg-zinc-200 font-semibold px-8 py-5 rounded-3xl text-lg">
-                Entrar em contato <span class="text-2xl">✉️</span>
+            <a href="Pradojoaomiguel061@gmail.com" class="btn btn-primary">
+                Entrar em contato <span class="icon">✉️</span>
             </a>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-white/10 py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-zinc-500">
+    <footer class="footer">
+        <div class="container text-center">
             <p>© 2026 • João Miguel • Portfólio Estudante de DS</p>
         </div>
     </footer>
-
-    <script>
-        tailwind.config = { content: [], theme: { extend: {} } }
-    </script>
 </body>
 </html>

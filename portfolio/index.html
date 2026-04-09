@@ -4,243 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Miguel | Portfólio Escolar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
-        
-        :root {
-            --glass: rgba(255, 255, 255, 0.08);
-        }
-        
-        * {
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 150ms;
-        }
-        
-        .nav-glass {
-            background: rgba(10, 10, 10, 0.75);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-        }
-        
-        .glass-card {
-            background: var(--glass);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.12);
-        }
-        
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        
-        .hero-text {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#0a0a0a] text-white font-sans">
-
-    <!-- NAVBAR (igual em todas as páginas) -->
-    <nav class="nav-glass fixed top-0 left-0 right-0 z-50 border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center gap-x-2">
-                <div class="w-8 h-8 bg-white rounded-2xl flex items-center justify-center text-[#0a0a0a] font-bold text-xl">JM</div>
+<body>
+    <nav class="nav-glass fixed top-0 left-0 right-0">
+        <div class="container flex-between nav-padding">
+            <div class="flex gap-2">
+                <div class="w-8 h-8 bg-white rounded-2xl flex-center text-dark font-bold text-xl">JM</div>
                 <h1 class="text-2xl font-semibold tracking-tight">João Miguel</h1>
             </div>
             
-            <!-- Menu -->
-            <ul class="flex items-center gap-x-8 text-sm font-medium">
-                <li><a href="index.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">Início</a></li>
-                <li><a href="1ano.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">1º Ano</a></li>
-                <li><a href="2ano.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">2º Ano</a></li>
-                <li><a href="3ano.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">3º Ano</a></li>
-                <li><a href="projetos.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">Projetos</a></li>
+            <ul class="flex gap-6 text-sm font-medium">
+                <li><a href="index.html" class="link">Início</a></li>
+                <li><a href="1ano.html" class="link">1º Ano</a></li>
+                <li><a href="2ano.html" class="link">2º Ano</a></li>
+                <li><a href="3ano.html" class="link">3º Ano</a></li>
+                <li><a href="projetos.html" class="link">Projetos</a></li>
             </ul>
             
-            <!-- Status -->
-            <div class="flex items-center gap-x-2 text-xs uppercase tracking-widest font-medium px-4 py-2 bg-white/10 rounded-3xl">
-                <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+            <div class="flex gap-2 text-xs uppercase tracking-widest font-medium px-4 py-2 badge">
+                <div class="badge-pulse"></div>
                 Estudante de DS • 3º EM
             </div>
         </div>
     </nav>
 
-    <!-- HERO - HOMEPAGE -->
-    <header class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <!-- Texto -->
+    <header class="hero-bg hero-full flex-center hero-padding">
+        <div class="container grid-2 gap-12 flex-center">
             <div class="space-y-8">
-                <div class="inline-flex items-center gap-2 bg-white/10 text-white text-sm font-medium px-6 py-3 rounded-3xl backdrop-blur-xl">
-                    <span class="text-emerald-400">●</span>
+                <div class="flex gap-2 bg-white/10 text-white text-sm font-medium px-6 py-3 rounded-3xl backdrop">
+                    <span class="text-green">●</span>
                     3º Ano do EM - DS
                 </div>
                 
-                <h1 class="hero-text text-7xl md:text-8xl font-semibold leading-none tracking-tighter">
+                <h1 class="text-7xl md:text-8xl font-semibold tracking-tight">
                     Olá, eu sou o<br><span class="text-white">João Miguel</span>
                 </h1>
                 
-                <p class="text-2xl text-zinc-400 max-w-lg">
+                <p class="text-xl text-muted max-w-lg">
                     Lewis, tenho 16 anos, nascido em Duque de Caxias e apaixonado por esportes e tecnologia.
                 </p>
                 
-                <!-- Substitua com sua bio curta -->
-                <p class="text-zinc-300 text-lg max-w-md">
-                   
+                <p class="text-lg text-muted-dark max-w-md">
                     Faço de tudo um pouco, sempre querendo aprender coisas novas, mas minha maior paixão é a tecnologia, sempre buscando evoluir mentalmente e fisicamente.
                 </p>
                 
-                <div class="flex flex-wrap gap-4">
-                    <a href="projetos.html" 
-                       class="flex items-center justify-center gap-x-3 bg-white text-[#0a0a0a] hover:bg-zinc-200 font-semibold px-8 py-5 rounded-3xl text-lg">
+                <div class="flex-wrap gap-4">
+                    <a href="projetos.html" class="btn btn-primary">
                         Ver meus projetos
-                        <span class="text-2xl">→</span>
+                        <span class="icon">→</span>
                     </a>
-                    <a href="ano3.html" 
-                       class="flex items-center justify-center gap-x-3 border border-white/30 hover:border-white/60 font-medium px-8 py-5 rounded-3xl text-lg">
+                    <a href="3ano.html" class="btn btn-outline">
                         Conheça meu 3º ano
                     </a>
                 </div>
                 
-                <div class="flex items-center gap-x-8 text-sm text-zinc-400 pt-6 border-t border-white/10">
+                <div class="flex gap-8 text-sm text-muted border-t-pt">
                     <div>📍 São Paulo, Brasil</div>
                     <div>📧 Pradojoaomiguel061@gmail.com</div>
-                    <div class="flex gap-x-4">
-                        <a href="https://www.linkedin.com/in/jo%C3%A3o-miguel-prado-gossani-641147361/" class="hover:text-white">LinkedIn</a>
-                        <a href="https://github.com/JoaoMiguel-oss" class="hover:text-white">GitHub</a>
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-miguel-prado-gossani-641147361/" class="link">LinkedIn</a>
+                        <a href="https://github.com/JoaoMiguel-oss" class="link">GitHub</a>
                     </div>
                 </div>
             </div>
             
-            <!-- Visual glass (foto ou placeholder) -->
-            <div class="relative hidden md:block">
-                <div class="glass-card p-3 rounded-[3rem] shadow-2xl">
-                    <div class="bg-[#1a1a1a] aspect-square rounded-3xl flex items-center justify-center overflow-hidden">
+            <div class="relative hidden-mobile">
+                <div class="glass-card p-3 rounded-[3rem] shadow">
+                    <div class="bg-secondary aspect-square rounded-3xl flex-center overflow-hidden">
                         <img src="costas.jpg" alt="Foto de João Miguel" class="w-full h-full object-cover">
                     </div>
                 </div>
                 
-                <!-- Efeito flutuante -->
-                <div class="absolute -bottom-6 -left-6 glass-card px-6 py-4 rounded-3xl flex items-center gap-x-4 text-sm">
-                    <div class="text-4xl"></div>
+                <div class="absolute -bottom-6 -left-6 glass-card px-6 py-4 rounded-3xl flex gap-4 text-sm">
+                    <div class="icon-lg"></div>
                     <div>
                         <p class="font-medium">3º Ano DS</p>
-                        <p class="text-emerald-400 text-xs">Em andamento • 2026</p>
+                        <p class="text-green text-xs">Em andamento • 2026</p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- JORNADA RÁPIDA -->
-    <section class="max-w-7xl mx-auto px-6 py-24">
-        <h2 class="section-title text-5xl font-semibold text-center mb-16">Minha jornada no ADS</h2>
+    <section class="container section">
+        <h2 class="text-5xl font-semibold text-center mb-16">Minha jornada no ADS</h2>
         
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- Card 1º Ano -->
-            <a href="1ano.html" class="glass-card group rounded-3xl p-8 hover:scale-[1.03] flex flex-col">
+        <div class="grid-3 gap-6">
+            <a href="1ano.html" class="glass-card card-link">
                 <div class="text-6xl mb-6">1️⃣</div>
                 <h3 class="text-3xl font-semibold mb-2">1º Ano</h3>
-                <p class="text-zinc-400 flex-1">1 ano escola regular integral, estudei no Meirelles</p>
-                <div class="mt-8 text-sm flex items-center gap-x-2 text-zinc-400 group-hover:text-white">
-                    Explorar ano <span class="text-2xl">→</span>
+                <p class="text-muted flex-1">1 ano escola regular integral, estudei no Meirelles</p>
+                <div class="mt-8 text-sm flex gap-2 text-muted link-green">
+                    Explorar ano <span class="icon">→</span>
                 </div>
             </a>
             
-            <!-- Card 2º Ano -->
-            <a href="2ano.html" class="glass-card group rounded-3xl p-8 hover:scale-[1.03] flex flex-col">
+            <a href="2ano.html" class="glass-card card-link">
                 <div class="text-6xl mb-6">2️⃣</div>
                 <h3 class="text-3xl font-semibold mb-2">2º Ano</h3>
-                <p class="text-zinc-400 flex-1">Comecei em DS, aprendi o básico e fundei minha startup.</p>
-                <div class="mt-8 text-sm flex items-center gap-x-2 text-zinc-400 group-hover:text-white">
-                    Explorar ano <span class="text-2xl">→</span>
+                <p class="text-muted flex-1">Comecei em DS, aprendi o básico e fundei minha startup.</p>
+                <div class="mt-8 text-sm flex gap-2 text-muted link-green">
+                    Explorar ano <span class="icon">→</span>
                 </div>
             </a>
             
-            <!-- Card 3º Ano -->
-            <a href="3ano.html" class="glass-card group rounded-3xl p-8 hover:scale-[1.03] flex flex-col">
+            <a href="3ano.html" class="glass-card card-link">
                 <div class="text-6xl mb-6">3️⃣</div>
                 <h3 class="text-3xl font-semibold mb-2">3º Ano</h3>
-                <p class="text-zinc-400 flex-1">Em andamento, aprendendo um pouco de tudo.</p>
-                <div class="mt-8 text-sm flex items-center gap-x-2 text-zinc-400 group-hover:text-white">
-                    Explorar ano <span class="text-2xl">→</span>
+                <p class="text-muted flex-1">Em andamento, aprendendo um pouco de tudo.</p>
+                <div class="mt-8 text-sm flex gap-2 text-muted link-green">
+                    Explorar ano <span class="icon">→</span>
                 </div>
             </a>
         </div>
     </section>
 
-    <!-- PROJETOS EM DESTAQUE (preview) -->
-    <section class="bg-white/5 py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
-                <h2 class="section-title text-5xl font-semibold">Projetos em destaque</h2>
-                <a href="projetos.html" class="flex items-center gap-x-3 text-sm uppercase tracking-widest hover:text-zinc-300">
+    <section class="bg-white/5 section">
+        <div class="container">
+            <div class="flex-between items-end mb-12">
+                <h2 class="text-5xl font-semibold">Projetos em destaque</h2>
+                <a href="projetos.html" class="flex gap-3 text-sm uppercase tracking-widest text-muted">
                     Ver todos os projetos 
-                    <span class="text-3xl leading-none">→</span>
+                    <span class="text-3xl">→</span>
                 </a>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Projeto 1 -->
-                <div class="glass-card rounded-3xl p-8">
-                    <div class="text-xs uppercase tracking-widest text-emerald-400 mb-4">2026 • 3º Ano</div>
+            <div class="grid-3 gap-6">
+                <div class="glass-card card-p">
+                    <div class="text-xs uppercase tracking-widest text-green mb-4">2026 • 3º Ano</div>
                     <h3 class="text-2xl font-semibold mb-3">Trivio</h3>
-                    <p class="text-zinc-400 line-clamp-3 mb-8">Projeto principal, tema de Startup.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">HTML</span>
-                        <span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">CSS</span>
-                        <span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">JS</span>
-                        <span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">MongoDB</span>
-                        <span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">Node.js</span>
+                    <p class="text-muted line-clamp-3 mb-8">Projeto principal, tema de Startup.</p>
+                    <div class="flex-wrap gap-2">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Node.js</span>
                     </div>
                 </div>
                 
-                <!-- Projeto 2 -->
-                <div class="glass-card rounded-3xl p-8">
-                    <div class="text-xs uppercase tracking-widest text-emerald-400 mb-4">2026 • 2º Ano</div>
+                <div class="glass-card card-p">
+                    <div class="text-xs uppercase tracking-widest text-green mb-4">2026 • 2º Ano</div>
                     <h3 class="text-2xl font-semibold mb-3">Landing page Trivio</h3>
-                    <p class="text-zinc-400 line-clamp-3 mb-8">Página de vendas Trivio.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">HTML</span>
-                        <span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">CSS</span>
-                        <span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">JS</span>
+                    <p class="text-muted line-clamp-3 mb-8">Página de vendas Trivio.</p>
+                    <div class="flex-wrap gap-2">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JS</span>
                     </div>
                 </div>
                 
-                <!-- Projeto 3 -->
-                <div class="glass-card rounded-3xl p-8">
-                    <div class="text-xs uppercase tracking-widest text-emerald-400 mb-4">2026 • 3º Ano</div>
+                <div class="glass-card card-p">
+                    <div class="text-xs uppercase tracking-widest text-green mb-4">2026 • 3º Ano</div>
                     <h3 class="text-2xl font-semibold mb-3">Página informativa HxH</h3>
-                    <p class="text-zinc-400 line-clamp-3 mb-8">Fiz uma página informativa sobre Hunter x Hunter com aucilio de IA.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">React</span>
-                        <span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">Node</span>
+                    <p class="text-muted line-clamp-3 mb-8">Fiz uma página informativa sobre Hunter x Hunter com aucilio de IA.</p>
+                    <div class="flex-wrap gap-2">
+                        <span class="tag">React</span>
+                        <span class="tag">Node</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-white/10 py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-zinc-500 flex flex-col md:flex-row justify-between items-center gap-4">
+    <footer class="footer">
+        <div class="container flex-between text-center">
             <p>© 2026 • João Miguel • Portfólio Estudante de DS</p>
         </div>
     </footer>
-
-    <script>
-        tailwind.config = {
-            content: [],
-            theme: {
-                extend: {}
-            }
-        }
-    </script>
 </body>
 </html>

@@ -5,69 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2º Ano | João Miguel</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#0a0a0a] text-white font-sans">
-
-    <!-- NAVBAR -->
-    <nav class="nav-glass fixed top-0 left-0 right-0 z-50 border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-x-2">
-                <div class="w-8 h-8 bg-white rounded-2xl flex items-center justify-center text-[#0a0a0a] font-bold text-xl">JM</div>
+<body>
+    <nav class="nav-glass fixed top-0 left-0 right-0">
+        <div class="container flex-between nav-padding">
+            <div class="flex gap-2">
+                <div class="w-8 h-8 bg-white rounded-2xl flex-center text-dark font-bold text-xl">JM</div>
                 <h1 class="text-2xl font-semibold tracking-tight">João Miguel</h1>
             </div>
             
-            <ul class="flex items-center gap-x-8 text-sm font-medium">
-                <li><a href="index.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">Início</a></li>
-                <li><a href="1ano.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">1º Ano</a></li>
-                <li><a href="2ano.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">2º Ano</a></li>
-                <li><a href="3ano.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">3º Ano</a></li>
-                <li><a href="projetos.html" class="hover:text-zinc-400 px-4 py-2 rounded-3xl hover:bg-white/10">Projetos</a></li>
+            <ul class="flex gap-6 text-sm font-medium">
+                <li><a href="index.html" class="link">Início</a></li>
+                <li><a href="1ano.html" class="link">1º Ano</a></li>
+                <li><a href="2ano.html" class="link">2º Ano</a></li>
+                <li><a href="3ano.html" class="link">3º Ano</a></li>
+                <li><a href="projetos.html" class="link">Projetos</a></li>
             </ul>
             
-            <div class="flex items-center gap-x-2 text-xs uppercase tracking-widest font-medium px-4 py-2 bg-white/10 rounded-3xl">
-                <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+            <div class="flex gap-2 text-xs uppercase tracking-widest font-medium px-4 py-2 badge">
+                <div class="badge-pulse"></div>
                 Estudante de DS • 3º EM
             </div>
         </div>
     </nav>
 
-    <!-- CONTEÚDO -->
-    <div class="max-w-7xl mx-auto px-6 pt-28 pb-24">
-        <h1 class="section-title text-6xl font-semibold text-center mb-4">2º Ano • DS</h1>
-        <p class="text-center text-zinc-400 text-xl max-w-2xl mx-auto">
+    <div class="container pt-28 pb-24">
+        <h1 class="text-6xl font-semibold text-center mb-4">2º Ano • DS</h1>
+        <p class="text-center text-muted text-xl max-w-2xl mx-auto">
             Comecei no meu curso de DS
         </p>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
-            <div class="glass-card rounded-3xl p-8">
+        <div class="grid-3 gap-8 mt-20">
+            <div class="glass-card card-p">
                 <h3 class="text-2xl font-semibold mb-3">Lógica de Programação</h3>
-                <p class="text-zinc-400">Algoritmos, Variáveis, Operadores, Estruturas de decisão (if/else), Estruturas de repetição (for, while), Vetores e matrizes, Funções, Introdução a lógica booleana.</p>
+                <p class="text-muted">Algoritmos, Variáveis, Operadores, Estruturas de decisão (if/else), Estruturas de repetição (for, while), Vetores e matrizes, Funções, Introdução a lógica booleana.</p>
             </div>
-            <div class="glass-card rounded-3xl p-8">
+            <div class="glass-card card-p">
                 <h3 class="text-2xl font-semibold mb-3">Redes de Computadores</h3>
-                <p class="text-zinc-400">Conceitos de redes (LAN, WAN), Topologias, Modelo OSI, TCP/IP, Protocolos (HTTP, DNS, FTP), Endereçamento IP, Equipamentos de rede, Segurança básica.</p>
+                <p class="text-muted">Conceitos de redes (LAN, WAN), Topologias, Modelo OSI, TCP/IP, Protocolos (HTTP, DNS, FTP), Endereçamento IP, Equipamentos de rede, Segurança básica.</p>
             </div>
-            <div class="glass-card rounded-3xl p-8">
+            <div class="glass-card card-p">
                 <h3 class="text-2xl font-semibold mb-3">Português</h3>
-                <p class="text-zinc-400">Literatura: Barroco, Arcadismo, Romantismo, Realismo, Parnasianismo, Simbolismo. Gramática: Sintaxe avançada, Concordância, Regência, Crase.</p>
+                <p class="text-muted">Literatura: Barroco, Arcadismo, Romantismo, Realismo, Parnasianismo, Simbolismo. Gramática: Sintaxe avançada, Concordância, Regência, Crase.</p>
             </div>
-            <div class="glass-card rounded-3xl p-8">
+            <div class="glass-card card-p">
                 <h3 class="text-2xl font-semibold mb-3">Matemática</h3>
-                <p class="text-zinc-400">Trigonometria, Geometria Plana e Espacial, Matrizes, Determinantes, Sistemas Lineares, Análise Combinatória, Probabilidade, Estatística.</p>
+                <p class="text-muted">Trigonometria, Geometria Plana e Espacial, Matrizes, Determinantes, Sistemas Lineares, Análise Combinatória, Probabilidade, Estatística.</p>
             </div>
         </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-white/10 py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-zinc-500">
+    <footer class="footer">
+        <div class="container text-center">
             <p>© 2026 • João Miguel • Portfólio Estudante de DS</p>
         </div>
     </footer>
-
-    <script>
-        tailwind.config = { content: [], theme: { extend: {} } }
-    </script>
 </body>
 </html>
