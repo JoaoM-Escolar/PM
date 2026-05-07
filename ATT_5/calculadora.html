@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Média Escolar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .result {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .result h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .result p {
+      font-size: 1.1rem;
+      margin: 5px 0;
+    }
+
+    .approved {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .recovery {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    .failed {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Média</h1>
+    
+    <div class="input-group">
+      <label for="nota1">Nota 1:</label>
+      <input type="number" id="nota1" placeholder="Digite a primeira nota" step="0.1" min="0" max="10">
+    </div>
+
+    <div class="input-group">
+      <label for="nota2">Nota 2:</label>
+      <input type="number" id="nota2" placeholder="Digite a segunda nota" step="0.1" min="0" max="10">
+    </div>
+
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    function calcularMedia() {
+      // Capturar os valores dos inputs
+      var nota1 = document.getElementById('nota1').value;
+      var nota2 = document.getElementById('nota2').value;
+      
+      // Validar se os campos estão vazios
+      if (nota1 === '' || nota2 === '') {
+        document.getElementById('resultado').innerHTML = '<div class="result error"><p>Por favor, preencha todas as notas.</p></div>';
+        return;
+      }
+
+      // Converter para número
+      var n1 = parseFloat(nota1);
+      var n2 = parseFloat(nota2);
+
+      // Validar se são números válidos
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById('resultado').innerHTML = '<div class="result error"><p>Digite apenas números válidos.</p></div>';
+        return;
+      }
+
+      // Validar se as notas estão entre 0 e 10
+      if (n1 < 0 || n1 > 10 || n2 < 0 || n2 > 10) {
+        document.getElementById('resultado').innerHTML = '<div class="result error"><p>As notas devem estar entre 0 e 10.</p></div>';
+        return;
+      }
+
+      // Calcular a média
+      var media = (n1 + n2) / 2;
+      media = media.toFixed(1);
+
+      // Determinar a situação do aluno
+      var situacao;
+      var classe;
+
+      if (media >= 7) {
+        situacao = 'Aprovado';
+        classe = 'approved';
+      } else if (media >= 5) {
+        situacao = 'Recuperação';
+        classe = 'recovery';
+      } else {
+        situacao = 'Reprovado';
+        classe = 'failed';
+      }
+
+      // Exibir o resultado
+      document.getElementById('resultado').innerHTML = 
+        '<div class="result ' + classe + '">' +
+        '<h3>Média: ' + media + '</h3>' +
+        '<p>Situação: ' + situacao + '</p>' +
+        '</div>';
+
+      // Limpar os campos
+      document.getElementById('nota1').value = '';
+      document.getElementById('nota2').value = '';
+    }
+  </script>
+</body>
+</html>
